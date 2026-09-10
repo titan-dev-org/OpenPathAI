@@ -4,18 +4,13 @@ import { HF_ORG_URL, GITHUB_URL } from "@/lib/models";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-surface/50">
+    <footer className="border-t border-border bg-black">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-12">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-700 font-bold text-white">
-                O
-              </div>
-              <span className="font-semibold">
-                OpenPath<span className="text-emerald-400">AI</span>
-              </span>
-            </div>
+            <Link href="/" className="text-lg font-semibold tracking-tight">
+              OpenPathAI
+            </Link>
             <p className="mt-4 text-sm text-neutral-500">
               Open source AI startup. Membangun AI yang dapat diakses semua
               orang.
@@ -100,7 +95,7 @@ export default function Footer() {
               href={GITHUB_URL}
               target="_blank"
               rel="noreferrer"
-              className="rounded-md p-2 text-neutral-500 hover:bg-background hover:text-white"
+              className="rounded-md p-2 text-neutral-500 hover:bg-surface hover:text-white"
             >
               <Github size={16} />
             </a>
@@ -108,7 +103,7 @@ export default function Footer() {
               href="https://twitter.com"
               target="_blank"
               rel="noreferrer"
-              className="rounded-md p-2 text-neutral-500 hover:bg-background hover:text-white"
+              className="rounded-md p-2 text-neutral-500 hover:bg-surface hover:text-white"
             >
               <Twitter size={16} />
             </a>
@@ -116,7 +111,7 @@ export default function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noreferrer"
-              className="rounded-md p-2 text-neutral-500 hover:bg-background hover:text-white"
+              className="rounded-md p-2 text-neutral-500 hover:bg-surface hover:text-white"
             >
               <Linkedin size={16} />
             </a>
