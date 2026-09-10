@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import AppShell from "@/components/AppShell";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -34,7 +34,8 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body>
-        <AppShell>{children}</AppShell>
+        <Navbar />
+        <main className="pt-16">{children}</main>
         <Footer />
       </body>
     </html>
