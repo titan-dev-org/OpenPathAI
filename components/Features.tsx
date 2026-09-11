@@ -1,25 +1,25 @@
-import { Shield, Zap, HeartHandshake, Cpu } from "lucide-react";
+import { Shield, Zap, Cpu, HeartHandshake } from "lucide-react";
 
 const features = [
   {
     icon: Zap,
-    title: "Performa Tinggi",
-    desc: "Model dioptimalkan untuk inference cepat bahkan di hardware konsumen.",
+    title: "Inference Cepat",
+    desc: "Model dioptimalkan untuk latensi rendah pada perangkat konsumen maupun server produksi.",
   },
   {
     icon: Shield,
     title: "Lisensi Terbuka",
-    desc: "Apache 2.0 & MIT. Gunakan untuk komersial tanpa biaya tambahan.",
+    desc: "Dirilis dengan lisensi MIT dan Apache 2.0. Bebas digunakan untuk riset maupun komersial.",
   },
   {
     icon: Cpu,
-    title: "Multi-Platform",
-    desc: "Kompatibel dengan PyTorch, TensorFlow, ONNX, dan llama.cpp.",
+    title: "Kompatibel Luas",
+    desc: "Mendukung PyTorch, ONNX, TensorRT, dan llama.cpp untuk deployment fleksibel.",
   },
   {
     icon: HeartHandshake,
-    title: "Komunitas Aktif",
-    desc: "Didukung developer di Discord dan Hugging Face.",
+    title: "Dokumentasi Lengkap",
+    desc: "Setiap model dilengkapi kartu model, contoh kode, dan panduan penggunaan.",
   },
 ];
 
@@ -28,15 +28,15 @@ export default function Features() {
     <section id="features" className="border-t border-border py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
+          <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
             Keunggulan
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-            Kenapa memilih model kami?
+            Dibangun untuk produksi
           </h2>
           <p className="mt-4 text-neutral-400">
-            Dibangun oleh peneliti dan engineer dengan fokus pada kualitas,
-            kecepatan, dan keterbukaan.
+            Setiap model dirancang dengan fokus pada kualitas, kecepatan, dan
+            keterbukaan — siap dipakai dari prototipe hingga skala produksi.
           </p>
         </div>
 
@@ -46,9 +46,9 @@ export default function Features() {
             return (
               <div
                 key={f.title}
-                className="group rounded-xl border border-border bg-surface p-6 transition hover:-translate-y-1 hover:border-emerald-500/50"
+                className="group rounded-xl border border-border bg-surface p-6 transition hover:-translate-y-1 hover:border-white/40"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-600/10 text-emerald-400 transition group-hover:bg-emerald-600 group-hover:text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border text-white transition group-hover:bg-white group-hover:text-black">
                   <Icon size={18} />
                 </div>
                 <h3 className="mt-5 font-semibold">{f.title}</h3>
