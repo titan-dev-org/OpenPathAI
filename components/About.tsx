@@ -1,9 +1,9 @@
-import { Rocket, Users, Code2, Globe } from "lucide-react";
+import { Code2, Users, Rocket, Globe } from "lucide-react";
 
 const stats = [
-  { icon: Code2, value: "6+", label: "Model Dirilis" },
-  { icon: Users, value: "Baru", label: "Community" },
-  { icon: Rocket, value: "Open", label: "Source" },
+  { icon: Code2, value: "6", label: "Model Dirilis" },
+  { icon: Users, value: "Open", label: "Community" },
+  { icon: Rocket, value: "MIT", label: "Lisensi" },
   { icon: Globe, value: "∞", label: "Gratis Dipakai" },
 ];
 
@@ -17,19 +17,18 @@ export default function About() {
               Tentang Kami
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-              OpenPathAI membangun AI terbuka untuk Indonesia & dunia
+              AI terbuka untuk Indonesia dan dunia
             </h2>
             <p className="mt-6 text-neutral-400">
-              OpenPathAI adalah startup AI open source yang berfokus pada
-              pengembangan model bahasa, vision-language, image generation,
-              dan computer vision yang dapat diakses siapa saja. Semua model
-              kami dirilis secara publik di Hugging Face dengan lisensi
-              terbuka.
+              OpenPathAI mengembangkan model bahasa, visi, dan generatif
+              berskala produksi. Seluruh model dirilis secara publik di
+              Hugging Face dengan lisensi terbuka untuk riset maupun
+              komersial.
             </p>
             <p className="mt-4 text-neutral-400">
-              Misi kami sederhana: membuat AI canggih menjadi demokratis.
-              Kami percaya inovasi terbaik lahir dari kolaborasi terbuka,
-              bukan dari kotak hitam tertutup.
+              Fokus kami: menghadirkan AI yang transparan, efisien, dan
+              relevan dengan kebutuhan lokal — mulai dari domain hukum,
+              keamanan siber, hingga computer vision industri.
             </p>
           </div>
 
