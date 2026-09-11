@@ -13,12 +13,11 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
+            <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
               Tentang Kami
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-              OpenPathAI membangun AI terbuka untuk{" "}
-              <span className="gradient-text">Indonesia & dunia</span>
+              OpenPathAI membangun AI terbuka untuk Indonesia & dunia
             </h2>
             <p className="mt-6 text-neutral-400">
               OpenPathAI adalah startup AI open source yang berfokus pada
@@ -40,9 +39,9 @@ export default function About() {
               return (
                 <div
                   key={s.label}
-                  className="rounded-xl border border-border bg-surface p-6 transition hover:border-emerald-500/50"
+                  className="rounded-xl border border-border bg-surface p-6 transition hover:border-white/40"
                 >
-                  <Icon className="text-emerald-400" size={22} />
+                  <Icon className="text-white" size={22} />
                   <p className="mt-4 text-3xl font-bold">{s.value}</p>
                   <p className="mt-1 text-sm text-neutral-500">{s.label}</p>
                 </div>
