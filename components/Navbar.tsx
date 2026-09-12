@@ -1,12 +1,29 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { HF_ORG_URL } from "@/lib/models";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const isHome = pathname === "/";
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Di home: hanya tampil saat scroll. Di halaman lain: selalu tampil.
+  const visible = !isHome || scrolled;
 
   const links = [
     { href: "/", label: "Home" },
@@ -16,7 +33,11 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-black/80 backdrop-blur-md">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-border bg-black/80 backdrop-blur-md transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex h-16 items-center justify-between px-6 lg:px-12">
         <Link href="/" className="text-lg font-semibold tracking-tight">
           OpenPathAI
