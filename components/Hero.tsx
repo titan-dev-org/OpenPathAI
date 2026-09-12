@@ -7,8 +7,8 @@ import Image from "next/image";
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1600&q=80",
-    title: "Open Source AI untuk Semua",
+      "https://cdn.phototourl.com/free/2026-09-12-c55773d7-ebd3-493b-b54d-8e56b9b51d92.png",
+    title: "Introducing Orbit 3 VL Flash",
     subtitle:
       "OpenPathAI merilis model AI canggih secara gratis di Hugging Face untuk mempercepat inovasi.",
     cta: "Jelajahi Model",
@@ -224,4 +224,4 @@ export default function Hero() {
       </a>
     </section>
   );
-  }
+                                            }
