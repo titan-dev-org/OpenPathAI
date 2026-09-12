@@ -5,6 +5,7 @@ const nextConfig = {
       { protocol: "https", hostname: "huggingface.co" },
       { protocol: "https", hostname: "cdn-avatars.huggingface.co" },
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "cdn.phototourl.com" },
     ],
   },
 };
