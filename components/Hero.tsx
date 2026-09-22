@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
@@ -87,73 +86,81 @@ export default function Hero() {
             <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
             <span className="h-3 w-3 rounded-full bg-[#28c840]" />
             <span className="ml-3 text-xs text-neutral-500">
-              openpathai — bash — 80×24
+              openpathai — python — 80×24
             </span>
           </div>
 
           {/* Terminal body */}
-          <div className="relative">
-            {/* Background image */}
-            <div className="relative aspect-[16/10] w-full">
-              <Image
-                src="https://cdn.phototourl.com/free/2026-09-12-c55773d7-ebd3-493b-b54d-8e56b9b51d92.png"
-                alt="OpenPathAI preview"
-                fill
-                priority
-                className="object-cover opacity-40"
-              />
+          <div className="bg-[#0b0b0b] p-5 text-[12px] leading-relaxed text-neutral-300 sm:p-6 sm:text-[13px]">
+            {/* Prompt line 1 */}
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span className="text-emerald-400">➜</span>
+              <span className="text-sky-400">~/openpathai</span>
+              <span className="text-neutral-500">git:(</span>
+              <span className="text-red-400">main</span>
+              <span className="text-neutral-500">)</span>
+              <span className="text-white">python</span>
             </div>
 
-            {/* Terminal content overlay */}
-            <div className="absolute inset-0 bg-black/70 p-5 text-[12px] leading-relaxed text-neutral-300 sm:p-6 sm:text-[13px]">
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                <span className="text-emerald-400">➜</span>
-                <span className="text-sky-400">~/openpathai</span>
-                <span className="text-neutral-500">git:(</span>
-                <span className="text-red-400">main</span>
-                <span className="text-neutral-500">)</span>
-                <span className="text-white">python -c</span>
+            {/* Code block */}
+            <pre className="mt-2 whitespace-pre-wrap break-words text-[12px] leading-relaxed sm:text-[13px]">
+              <code>
+                <span className="text-purple-400">from</span>{" "}
+                <span className="text-neutral-200">transformers</span>{" "}
+                <span className="text-purple-400">import</span>{" "}
                 <span className="text-yellow-300">
-                  "from openpathai import Orbit"
+                  AutoTokenizer, AutoModelForCausalLM
                 </span>
-              </div>
+                {"\n\n"}
+                <span className="text-neutral-600"># Load model langsung dari Hugging Face</span>
+                {"\n"}
+                <span className="text-neutral-200">model_id</span> ={" "}
+                <span className="text-emerald-400">
+                  "OpenPathAI/Orbit-3-VL-Flash"
+                </span>
+                {"\n\n"}
+                <span className="text-neutral-200">tokenizer</span> ={" "}
+                <span className="text-yellow-300">AutoTokenizer</span>.
+                <span className="text-sky-400">from_pretrained</span>(
+                <span className="text-neutral-200">model_id</span>)
+                {"\n"}
+                <span className="text-neutral-200">model</span> ={" "}
+                <span className="text-yellow-300">AutoModelForCausalLM</span>.
+                <span className="text-sky-400">from_pretrained</span>(
+                <span className="text-neutral-200">model_id</span>,
+                {"\n"}
+                {"    "}
+                <span className="text-neutral-200">torch_dtype</span>=
+                <span className="text-emerald-400">"float32"</span>,
+                {"\n"}
+                {"    "}
+                <span className="text-neutral-200">device_map</span>=
+                <span className="text-emerald-400">"auto"</span>)
+              </code>
+            </pre>
 
-              <div className="mt-3 space-y-1 text-neutral-400">
-                <p>
-                  <span className="text-neutral-600">[00:00:01]</span>{" "}
-                  <span className="text-sky-400">info</span>&nbsp;&nbsp;Loading{" "}
-                  <span className="text-white">Orbit-3-VL-Flash</span> ...
-                </p>
-                <p>
-                  <span className="text-neutral-600">[00:00:02]</span>{" "}
-                  <span className="text-sky-400">info</span>&nbsp;&nbsp;Params:{" "}
-                  <span className="text-white">4B</span> · Precision:{" "}
-                  <span className="text-white">FP32</span>
-                </p>
-                <p>
-                  <span className="text-neutral-600">[00:00:03]</span>{" "}
-                  <span className="text-sky-400">info</span>&nbsp;&nbsp;Domain:{" "}
-                  <span className="text-white">Hukum Indonesia</span>
-                </p>
-                <p>
-                  <span className="text-neutral-600">[00:00:04]</span>{" "}
-                  <span className="text-emerald-400">ready</span>&nbsp;Model
-                  loaded successfully ✓
-                </p>
-              </div>
+            {/* Output */}
+            <div className="mt-3 space-y-1 text-neutral-500">
+              <p>Downloading model.safetensors: 100% |██████████| 8.0G/8.0G</p>
+              <p>Loading weights: 100% |██████████| 249/249</p>
+              <p>
+                <span className="text-emerald-400">✓</span> Model loaded —
+                <span className="text-neutral-300"> Orbit-3-VL-Flash</span>
+              </p>
+            </div>
 
-              <div className="mt-4 flex items-center gap-2">
-                <span className="text-emerald-400">➜</span>
-                <span className="text-sky-400">~/openpathai</span>
-                <span className="text-neutral-500">git:(</span>
-                <span className="text-red-400">main</span>
-                <span className="text-neutral-500">)</span>
-                <span className="text-white">▊</span>
-              </div>
+            {/* Prompt terakhir */}
+            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span className="text-emerald-400">➜</span>
+              <span className="text-sky-400">~/openpathai</span>
+              <span className="text-neutral-500">git:(</span>
+              <span className="text-red-400">main</span>
+              <span className="text-neutral-500">)</span>
+              <span className="inline-block h-4 w-2 animate-pulse bg-neutral-300 align-middle" />
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-            }
+      }
