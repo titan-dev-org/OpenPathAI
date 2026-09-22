@@ -23,24 +23,24 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-12">
         {/* Judul besar */}
-        <h1 className="max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 className="max-w-4xl text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
           Build with our open-weight AI models,{" "}
-          <span className="inline-flex items-baseline gap-1 align-baseline">
+          <span className="inline-flex items-center gap-1.5 align-middle">
             <span className="text-white">Orbit</span>
-            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2 py-0.5 align-middle text-sm font-medium text-neutral-300">
+            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium text-neutral-300 sm:text-lg lg:text-xl">
               VL
             </span>
-            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2 py-0.5 align-middle text-sm font-medium text-neutral-300">
+            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium text-neutral-300 sm:text-lg lg:text-xl">
               3
             </span>
           </span>{" "}
           and{" "}
-          <span className="inline-flex items-baseline gap-1 align-baseline">
+          <span className="inline-flex items-center gap-1.5 align-middle">
             <span className="text-white">Orbit</span>
-            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2 py-0.5 align-middle text-sm font-medium text-neutral-300">
+            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium text-neutral-300 sm:text-lg lg:text-xl">
               8B
             </span>
-            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2 py-0.5 align-middle text-sm font-medium text-neutral-300">
+            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium uppercase text-neutral-300 sm:text-lg lg:text-xl">
               Thinking
             </span>
           </span>{" "}
@@ -79,44 +79,81 @@ export default function Hero() {
           </Link>
         </div>
 
-        {/* Preview image / card di bawah */}
-        <div className="mt-16 overflow-hidden rounded-xl border border-white/10 bg-surface">
-          <div className="flex items-center gap-2 border-b border-white/10 bg-black/40 px-4 py-3">
-            <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-            <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-            <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
+        {/* Terminal window */}
+        <div className="mt-16 overflow-hidden rounded-xl border border-white/10 bg-[#0b0b0b] font-mono shadow-[0_0_60px_-20px_rgba(255,255,255,0.15)]">
+          {/* Title bar */}
+          <div className="flex items-center gap-2 border-b border-white/10 bg-[#141414] px-4 py-3">
+            <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+            <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+            <span className="h-3 w-3 rounded-full bg-[#28c840]" />
             <span className="ml-3 text-xs text-neutral-500">
-              openpathai — terminal
+              openpathai — bash — 80×24
             </span>
           </div>
 
-          <div className="relative aspect-[16/10] w-full bg-black">
-            <Image
-              src="https://cdn.phototourl.com/free/2026-09-12-c55773d7-ebd3-493b-b54d-8e56b9b51d92.png"
-              alt="OpenPathAI preview"
-              fill
-              priority
-              className="object-cover"
-            />
+          {/* Terminal body */}
+          <div className="relative">
+            {/* Background image */}
+            <div className="relative aspect-[16/10] w-full">
+              <Image
+                src="https://cdn.phototourl.com/free/2026-09-12-c55773d7-ebd3-493b-b54d-8e56b9b51d92.png"
+                alt="OpenPathAI preview"
+                fill
+                priority
+                className="object-cover opacity-40"
+              />
+            </div>
 
-            {/* Overlay terminal-style di atas gambar */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-
-            <div className="absolute inset-x-0 bottom-0 p-6 font-mono text-xs text-neutral-300 sm:text-sm">
-              <div className="flex items-center gap-2 text-neutral-500">
-                <span className="h-1.5 w-1.5 rounded-full bg-white/50" />
-                <span>openpathai — model.py</span>
+            {/* Terminal content overlay */}
+            <div className="absolute inset-0 bg-black/70 p-5 text-[12px] leading-relaxed text-neutral-300 sm:p-6 sm:text-[13px]">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <span className="text-emerald-400">➜</span>
+                <span className="text-sky-400">~/openpathai</span>
+                <span className="text-neutral-500">git:(</span>
+                <span className="text-red-400">main</span>
+                <span className="text-neutral-500">)</span>
+                <span className="text-white">python -c</span>
+                <span className="text-yellow-300">
+                  "from openpathai import Orbit"
+                </span>
               </div>
-              <pre className="mt-3 leading-relaxed whitespace-pre-wrap break-words">
-{`$ python -c "from openpathai import Orbit"
-> Loading Orbit-3-VL-Flash (4B · FP32)...
-> Domain: Hukum Indonesia ✓
-> Ready. Type your prompt below ↓`}
-              </pre>
+
+              <div className="mt-3 space-y-1 text-neutral-400">
+                <p>
+                  <span className="text-neutral-600">[00:00:01]</span>{" "}
+                  <span className="text-sky-400">info</span>&nbsp;&nbsp;Loading{" "}
+                  <span className="text-white">Orbit-3-VL-Flash</span> ...
+                </p>
+                <p>
+                  <span className="text-neutral-600">[00:00:02]</span>{" "}
+                  <span className="text-sky-400">info</span>&nbsp;&nbsp;Params:{" "}
+                  <span className="text-white">4B</span> · Precision:{" "}
+                  <span className="text-white">FP32</span>
+                </p>
+                <p>
+                  <span className="text-neutral-600">[00:00:03]</span>{" "}
+                  <span className="text-sky-400">info</span>&nbsp;&nbsp;Domain:{" "}
+                  <span className="text-white">Hukum Indonesia</span>
+                </p>
+                <p>
+                  <span className="text-neutral-600">[00:00:04]</span>{" "}
+                  <span className="text-emerald-400">ready</span>&nbsp;Model
+                  loaded successfully ✓
+                </p>
+              </div>
+
+              <div className="mt-4 flex items-center gap-2">
+                <span className="text-emerald-400">➜</span>
+                <span className="text-sky-400">~/openpathai</span>
+                <span className="text-neutral-500">git:(</span>
+                <span className="text-red-400">main</span>
+                <span className="text-neutral-500">)</span>
+                <span className="text-white">▊</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+            }
