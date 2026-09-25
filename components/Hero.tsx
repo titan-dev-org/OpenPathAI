@@ -94,9 +94,7 @@ export default function Hero() {
             <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
             <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
             <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-            <span className="ml-3 text-xs text-neutral-500">
-              openpathai — python — 80×24
-            </span>
+            <span className="ml-3 text-xs text-neutral-500">Terminal</span>
           </div>
 
           {/* Terminal body */}
@@ -152,7 +150,9 @@ export default function Hero() {
 
             {/* Output */}
             <div className="mt-3 space-y-1 text-neutral-500">
-              <p>Downloading model.safetensors: 100% |██████████| 16.0G/16.0G</p>
+              <p>
+                Downloading model.safetensors: 100% |██████████| 16.0G/16.0G
+              </p>
               <p>Loading weights: 100% |██████████| 291/291</p>
               <p>
                 <span className="text-emerald-400">✓</span> Model loaded —
