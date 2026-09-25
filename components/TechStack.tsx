@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const techs = [
-  { name: "NVIDIA", logo: "/logos/nvidia.png" },
+  { name: "NVIDIA", logo: "/logos/nvida.png" },
   { name: "Transformers", logo: "/logos/transformers.png" },
   { name: "PyTorch", logo: "/logos/pytorch.png" },
   { name: "Hugging Face", logo: "/logos/huggingface.png" },
