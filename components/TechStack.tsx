@@ -32,15 +32,15 @@ export default function TechStack() {
           {techs.map((t) => (
             <div
               key={t.name}
-              className="group flex flex-col items-center justify-center rounded-xl border border-border bg-surface p-8 transition hover:border-white/40"
+              className="group flex flex-col items-center justify-center rounded-xl border border-border bg-surface p-8 transition hover:-translate-y-1 hover:border-white/40"
             >
-              <div className="relative flex h-14 w-full items-center justify-center">
+              <div className="relative flex h-16 w-full items-center justify-center">
                 <Image
                   src={t.logo}
                   alt={t.name}
-                  width={120}
-                  height={48}
-                  className="h-10 w-auto object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                  width={140}
+                  height={56}
+                  className="h-12 w-auto object-contain"
                 />
               </div>
               <p className="mt-4 text-sm font-medium text-neutral-400 transition group-hover:text-white">
@@ -52,4 +52,4 @@ export default function TechStack() {
       </div>
     </section>
   );
-          }
+}
