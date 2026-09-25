@@ -27,17 +27,26 @@ export default function Hero() {
           <span className="inline-flex items-center gap-1.5 align-middle">
             <span className="text-white">Orbit</span>
             <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium text-neutral-300 sm:text-lg lg:text-xl">
+              3
+            </span>
+            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium uppercase text-neutral-300 sm:text-lg lg:text-xl">
               VL
             </span>
             <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium text-neutral-300 sm:text-lg lg:text-xl">
-              3
+              Flash
             </span>
           </span>{" "}
           and{" "}
           <span className="inline-flex items-center gap-1.5 align-middle">
             <span className="text-white">Orbit</span>
             <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium text-neutral-300 sm:text-lg lg:text-xl">
+              3
+            </span>
+            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium text-neutral-300 sm:text-lg lg:text-xl">
               8B
+            </span>
+            <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium text-neutral-300 sm:text-lg lg:text-xl">
+              Llama
             </span>
             <span className="inline-block rounded-md border border-white/20 bg-white/5 px-2.5 py-0.5 text-base font-medium uppercase text-neutral-300 sm:text-lg lg:text-xl">
               Thinking
@@ -112,11 +121,13 @@ export default function Hero() {
                   AutoTokenizer, AutoModelForCausalLM
                 </span>
                 {"\n\n"}
-                <span className="text-neutral-600"># Load model langsung dari Hugging Face</span>
+                <span className="text-neutral-600">
+                  # Load model langsung dari Hugging Face
+                </span>
                 {"\n"}
                 <span className="text-neutral-200">model_id</span> ={" "}
                 <span className="text-emerald-400">
-                  "OpenPathAI/Orbit-3-VL-Flash"
+                  "OpenPathAI/Orbit-3-8B-Llama-thinking"
                 </span>
                 {"\n\n"}
                 <span className="text-neutral-200">tokenizer</span> ={" "}
@@ -131,7 +142,7 @@ export default function Hero() {
                 {"\n"}
                 {"    "}
                 <span className="text-neutral-200">torch_dtype</span>=
-                <span className="text-emerald-400">"float32"</span>,
+                <span className="text-emerald-400">"float16"</span>,
                 {"\n"}
                 {"    "}
                 <span className="text-neutral-200">device_map</span>=
@@ -141,11 +152,14 @@ export default function Hero() {
 
             {/* Output */}
             <div className="mt-3 space-y-1 text-neutral-500">
-              <p>Downloading model.safetensors: 100% |██████████| 8.0G/8.0G</p>
-              <p>Loading weights: 100% |██████████| 249/249</p>
+              <p>Downloading model.safetensors: 100% |██████████| 16.0G/16.0G</p>
+              <p>Loading weights: 100% |██████████| 291/291</p>
               <p>
                 <span className="text-emerald-400">✓</span> Model loaded —
-                <span className="text-neutral-300"> Orbit-3-VL-Flash</span>
+                <span className="text-neutral-300">
+                  {" "}
+                  Orbit-3-8B-Llama-thinking
+                </span>
               </p>
             </div>
 
@@ -163,4 +177,4 @@ export default function Hero() {
       </div>
     </section>
   );
-      }
+              }
