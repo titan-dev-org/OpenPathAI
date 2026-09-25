@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const techs = [
   { name: "NVIDIA", logo: "/logos/nvida.png" },
-  { name: "Transformers", logo: "/logos/transformers.png" },
+  { name: "Transformers", logo: "/logos/transformers.svg" },
   { name: "PyTorch", logo: "/logos/pytorch.png" },
-  { name: "Hugging Face", logo: "/logos/huggingface.png" },
+  { name: "Hugging Face", logo: "/logos/hf.svg" },
   { name: "CUDA", logo: "/logos/cuda.png" },
   { name: "ONNX", logo: "/logos/onnx.png" },
   { name: "Docker", logo: "/logos/docker.png" },
