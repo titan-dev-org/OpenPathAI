@@ -47,33 +47,10 @@ export const models: AIModel[] = [
     hfUrl: "https://huggingface.co/OpenPathAI/Orbit-1.2-image",
   },
   {
-    id: "yolo-detection-safety-equipment",
-    name: "YOLO Detection — Safety Equipment",
-    description:
-      "Deteksi alat keselamatan kerja (helm, rompi, sarung tangan, dll.) menggunakan YOLO untuk industri & K3.",
-    task: "Object Detection",
-    params: "—",
-    precision: "—",
-    tags: ["yolo", "object-detection", "safety", "industry"],
-    hfUrl: "https://huggingface.co/OpenPathAI/YOLO-detection-safety-equipment",
-  },
-  {
-    id: "yolo-detection-vehicle-plate",
-    name: "YOLO Detection — Vehicle Plate (2287)",
-    description:
-      "Deteksi pelat nomor kendaraan dengan dataset 2.287 gambar, cocok untuk sistem parkir & lalu lintas.",
-    task: "Object Detection",
-    params: "—",
-    precision: "—",
-    tags: ["yolo", "object-detection", "license-plate", "anpr"],
-    hfUrl:
-      "https://huggingface.co/OpenPathAI/YOLO-detection-vehcile-plate-2287",
-  },
-  {
     id: "orbit-0-2b-2837",
     name: "Orbit 0.2B 2837",
     description:
-      "Model bahasa ringan 0.2B parameter, cocok untuk perangkat edge, mobile, dan inference on-device.",
+      "Model bahasa ringan 0.2B dengan arsitektur GPT-2. Model ini merupakan hasil eksperimen sehingga tidak disarankan untuk digunakan dalam mengambil keputusan atau menyelesaikan suatu masalah.",
     task: "Text Generation",
     params: "0.2B",
     precision: "—",
